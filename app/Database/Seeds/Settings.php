@@ -34,7 +34,7 @@ class Settings extends Seeder
                 'settings_id' => 4,
                 'label' => 'Theme',
                 'title' => 'Theme',
-                'value' => 'Theme_2',
+                'value' => 'Default',
                 'createdBy' => 1,
             ],
             [

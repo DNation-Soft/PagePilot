@@ -467,68 +467,14 @@ function get_lebel_by_title_in_settings($lable)
     return !empty($data)?$data->title:'';
 }
 
-/**
- * @description This function provides a list of items or records that belong to a parent category based on a selected category
- * @param int $selected
- * @return string
- */
-function getListInParentCategory($selected)
-{
-    $table = DB()->table('cc_product_category');
-    $query = $table->where('parent_id', null)->get();
-    $options = '';
-    foreach ($query->getResult() as $value) {
-        $options .= '<option value="' . $value->prod_cat_id . '" ';
-        $options .= ($value->prod_cat_id == $selected) ? ' selected="selected"' : '';
-        $options .= '>' . $value->category_name . '</option>';
-    }
-    return $options;
-}
 
-/**
- * @description This function provides array of parent categories
- * @return array
- */
-function getParentCategoryArray()
-{
-    $table = DB()->table('cc_product_category');
-    return $table->where('parent_id', null)->get()->getResult();
-}
 
-/**
- * @description This function provides the given subcategory array by category id.
- * @param int $cat_id
- * @return array
- */
-function getCategoryBySubArray($cat_id)
-{
-    $table = DB()->table('cc_product_category');
-    return $table->where('parent_id', $cat_id)->orderBy('sort_order', 'ASC')->get()->getResult();
-}
 
-/**
- * @description This function provides checks if the given product_category_id exists and return data.
- * @param int $product_category_id
- * @return integer
- */
-function check_is_parent_category($product_category_id)
-{
-    $table = DB()->table('cc_product_category');
-    $cat = $table->where('prod_cat_id', $product_category_id)->get()->getRow();
-    return !empty($cat->parent_id)?$cat->parent_id:$cat->prod_cat_id;
-}
 
-/**
- * @description This function provides checks if the given product_category_id exists and return data.
- * @param int $product_category_id
- * @return bool
- */
-function check_is_sub_category($product_category_id)
-{
-    $table = DB()->table('cc_product_category');
-    $cat = $table->where('prod_cat_id', $product_category_id)->get()->getRow();
-    return !empty($cat->parent_id)? false : true;
-}
+
+
+
+
 
 /**
  * @description This function provides available theme and selected.
@@ -727,21 +673,7 @@ function available_template($sel = '')
     return $view;
 }
 
-/**
- * @description This function provides top menu.
- * @return string
- */
-function top_menu()
-{
-    $table = DB()->table('cc_product_category');
-    $query = $table->where('header_menu', '1')->get()->getResult();
-    $view = '';
-    foreach ($query as $val) {
-        $url = base_url('category/' . $val->prod_cat_id);
-        $view .= '<li class="nav-item"><a class="nav-link" aria-current="page" href="' . $url . '" >' . $val->category_name . '</a></li>';
-    }
-    return $view;
-}
+
 
 /**
  * @description This function provides modules access by key.
@@ -1120,17 +1052,7 @@ function order_id_by_status($order_id)
     return get_data_by_id('name', 'cc_order_status', 'order_status_id', $order->order_status_id);
 }
 
-/**
- * @description This function provides all side menu.
- * @return array
- */
-function getSideMenuArray()
-{
-    $table = DB()->table('cc_product_category');
-    $table->join('cc_icons','cc_icons.icon_id = cc_product_category.icon_id');
-    return $table->where('cc_product_category.side_menu', 1)->orderBy('cc_product_category.sort_order', 'ASC')->get()->getResult();
 
-}
 
 /**
  * @description This function provides add to cart button by product id.
@@ -1323,60 +1245,11 @@ function get_category_id_by_product_show_home_slide($category_id)
 
 }
 
-/**
- * @description This function provides category name by category id.
- * @param int $cate_id
- * @return mixed
- */
-function get_category_name_by_id($cate_id){
-    $table = DB()->table('cc_product_category');
-    $cat = $table->where('prod_cat_id', $cate_id)->get()->getRow();
-    return $cat->category_name;
-}
-
-/**
- * @description This function provides counting parent category by category id.
- * @param int $cate_id
- * @return int|void|null
- */
-function category_parent_count($cate_id){
-    $table = DB()->table('cc_product_category');
-    $cat = $table->where('prod_cat_id', $cate_id)->get()->getRow();
-    if ($cat->parent_id) {
-        return category_parent_count($cat->parent_id) + 1;
-    }
-}
-
-/**
- * @description This function provides category show with parent category by category id.
- * @param int $cate_id
- * @return void
- */
-function display_category_with_parent($cate_id)
-{
-    $catName = array();
-    if (!empty($cate_id)) {
-        $totalParent = category_parent_count($cate_id);
-        for ($i=0; $i<=$totalParent; $i++) {
-            $catName[] = get_category_name_by_id($cate_id);
-            $table = DB()->table('cc_product_category');
-            $cat = $table->where('prod_cat_id', $cate_id)->get()->getRow();
-            $cate_id = $cat->parent_id;
-        }
-    }
-
-    krsort($catName);
-
-    foreach ($catName as $key => $val){
-        if ($key == 0) {
-            print $val;
-        }else {
-            print $val." > ";
-        }
-    }
 
 
-}
+
+
+
 
 /**
  * @description This function provides rate type zone base.
@@ -1391,15 +1264,7 @@ function zone_rate_type(){
     return $status;
 }
 
-/**
- * @description This function provides all category by category id.
- * @param int $cat_id
- * @return array
- */
-function category_id_by_get_category_all_data($cat_id){
-    $table = DB()->table('cc_product_category');
-    return $table->join('cc_icons','cc_icons.icon_id = cc_product_category.icon_id')->where('cc_product_category.prod_cat_id',$cat_id)->get()->getRow();
-}
+
 
 /**
  * @description This function provides brand product count.

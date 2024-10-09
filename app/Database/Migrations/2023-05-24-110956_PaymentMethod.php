@@ -25,6 +25,12 @@ class PaymentMethod extends Migration
                 'null' => true,
                 'default' => null,
             ],
+            'image' => [
+                'type' => 'VARCHAR',
+                'constraint' => 155,
+                'null' => true,
+                'default' => null,
+            ],
             'status' => [
                 'type' => 'ENUM',
                 'constraint' => ['1', '0'],

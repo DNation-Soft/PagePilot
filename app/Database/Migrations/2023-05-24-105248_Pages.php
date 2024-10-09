@@ -60,6 +60,24 @@ class Pages extends Migration
                 'constraint' => ['Active', 'Inactive'],
                 'default' => 'Active',
             ],
+            'meta_title' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+                'default' => null,
+            ],
+            'meta_description' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+                'default' => null,
+            ],
+            '	meta_keyword' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+                'null' => true,
+                'default' => null,
+            ],
             'createdDtm' => [
                 'type' => 'DATETIME',
                 'default' => new RawSql('CURRENT_TIMESTAMP'),
