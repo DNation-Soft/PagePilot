@@ -28,6 +28,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                 <?php
+                $modules = modules_access();
                 $adRoleId = newSession()->adRoleId;
                 $modArrayPur = ['Dashboard'];
                 $menuAccessPur = all_menu_permission_check($modArrayPur, $adRoleId);
@@ -76,6 +77,7 @@
                 $modArrayPur = ['Album'];
                 $menuAccessPur = all_menu_permission_check($modArrayPur, $adRoleId);
                 if ($menuAccessPur == true) {
+                    if ($modules['album'] == 1) {
                     ?>
                     <li class="nav-item">
                         <a href="<?php echo base_url('admin/album'); ?>" class="nav-link">
@@ -85,7 +87,7 @@
                             </p>
                         </a>
                     </li>
-                <?php } ?>
+                <?php } } ?>
 
                 <li class="nav-header">Users</li>
 
@@ -169,7 +171,7 @@
                 <?php
                 $modArrayPur = ['Notice'];
                 $menuAccessPur = all_menu_permission_check($modArrayPur, $adRoleId);
-                if ($menuAccessPur == true) { ?>
+                if ($menuAccessPur == true) { if ($modules['notice'] == 1) { ?>
                     <li class="nav-item">
                         <a href="<?php echo base_url('admin/notice'); ?>" class="nav-link">
                             <i class="nav-icon far fa-calendar-alt"></i>
@@ -178,12 +180,13 @@
                             </p>
                         </a>
                     </li>
-                <?php } ?>
+                <?php } } ?>
 
                 <?php
                 $modArrayPur = ['Newsletter'];
                 $menuAccessPur = all_menu_permission_check($modArrayPur, $adRoleId);
                 if ($menuAccessPur == true) {
+                    if ($modules['subscribe'] == 1) {
                 ?>
                     <li class="nav-item">
                         <a href="<?php echo base_url('admin/newsletter'); ?>" class="nav-link">
@@ -193,12 +196,12 @@
                             </p>
                         </a>
                     </li>
-                <?php } ?>
+                <?php } } ?>
 
                 <?php
                 $modArrayPur = ['Email_send'];
                 $menuAccessPur = all_menu_permission_check($modArrayPur, $adRoleId);
-                if ($menuAccessPur == true) { ?>
+                if ($menuAccessPur == true) { if ($modules['email_send'] == 1) { ?>
                     <li class="nav-item">
                         <a href="<?php echo base_url('admin/email_send'); ?>" class="nav-link">
                             <i class="nav-icon far fa-calendar-alt"></i>
@@ -207,7 +210,7 @@
                             </p>
                         </a>
                     </li>
-                <?php } ?>
+                <?php } } ?>
 
             </ul>
         </nav>
