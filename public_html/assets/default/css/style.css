@@ -1,0 +1,384 @@
+@font-face {
+    font-family: SutonnyUniBanglaOMJ;
+    src: url('../font/SutonnyUniBanglaOMJRegular.ttf');
+}
+body{
+    background-color: #BFD3DB;
+}
+.bg_green{
+    background-color: #077749;
+}
+.bg_w{
+    background-color: #ffffff;
+}
+.border_L_R{
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+}
+.text_1{
+    color: #FFF;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.mt_25{
+    margin-top: 25px;
+}
+.title_1{
+    color: #ED1C24;
+    text-shadow: 0px 21px 6px rgba(0, 0, 0, 0.01), 0px 14px 5px rgba(0, 0, 0, 0.07), 0px 8px 5px rgba(0, 0, 0, 0.25), 0px 3px 3px rgba(0, 0, 0, 0.43), 0px 1px 2px rgba(0, 0, 0, 0.49);
+
+    /*outline-style:solid;*/
+    -webkit-text-stroke: 1px #FFF;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text_2{
+    color: #FFF;
+    text-shadow: 0px 23px 6px rgba(0, 0, 0, 0.01), 0px 15px 6px rgba(0, 0, 0, 0.04), 0px 8px 5px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.26), 0px 1px 2px rgba(0, 0, 0, 0.29);
+
+    -webkit-text-stroke:2px #1B1B1B;
+    font-family: "Roboto", system-ui;;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 2.73px;
+    text-transform: capitalize;
+}
+
+.bg_ye{
+    background-color: #EFCB00 !important;
+}
+.menu_2 .bor_l{
+    border-right: 1px solid #565352;
+    padding: 0px 22px;
+}
+.menu-con{
+    background-color: #fff;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+.menu_2 .nav-link{
+    color: #565352;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.menu_2 .nav-link:hover{
+    color: #ffffff !important;
+}
+.menu_2 .nav-item:hover{
+    color: #ffffff !important;
+    background-color: red ;
+}
+.menu_2 .subLink:hover{
+    color: #ffffff !important;
+    background-color: red !important; ;
+}
+.menu_2 .nav-item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btn-news-2{
+    color: #FFF;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 100%;
+    background-color: #00ADEF;
+}
+.bg-marque_2{
+    color: #565352;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+
+    background-color: #DAF5FF;
+}
+.bg-green{
+    background-color: #198754;
+}
+.text-foot{
+    color: #FFF;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 19px;
+}
+.text-jog{
+    color: #FFF;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    background-color: #00ADEF;
+    text-align: center;
+    padding: 12px;
+}
+.box-l-r{
+    border: 1px solid #BCBCBC;
+    margin-bottom: 14px;
+}
+
+.box-lr-r{
+    border: 1px solid #BCBCBC;
+    margin-bottom: 14px;
+    padding: 14px;
+}
+
+.pd-box{
+    padding: 11px 25px;
+}
+.text-sov{
+    color: #00ADEF;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.text-gm{
+    color: #000;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.tab-tit{
+    background-color: red !important;
+    color: #ffffff;
+}
+
+.thead{
+    background-color: #f6f04c;
+    color: #5a9227;
+}
+.tbody{
+    background-color: #d7f2fb;
+    color: #79bac2;
+}
+
+
+.link tr {
+    color: #565352;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.tab-link tr:nth-child(even){background-color: #fff ;}
+.tab-link tr{background-color: #DAF5FF;}
+
+.box-home{
+    background-color: #efefef;
+    padding: 10px;
+}
+.title-home{
+    color: red;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-align: center;
+}
+.text-home{
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main_content{
+    border: 2px solid #3aa9c3;
+    border-radius: 120px;
+    background-color: #dbf7ff;
+    padding: 40px 50px;
+    margin-top: 10px;
+}
+.main-title{
+    font-family: SutonnyUniBanglaOMJ;
+    border: 4px solid #375d88;
+    background-color: #fed5b7;
+    color: #052060;
+    width: 400px;
+    font-size: 35px;
+    text-align: center;
+}
+.main-img{
+    position: absolute;
+    left: 380px;
+    top: 96px;
+}
+.main-text{
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+    margin-top: 60px;
+}
+.dropdown-item.active, .dropdown-item:active{
+    background-color: #EFCB00 !important;
+}
+.menu_2 .active{
+    color: #ffffff;
+    background-color: red !important;
+}
+
+#teacher th {
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    background-color: #4e81ba;
+    color: #ffffff;
+}
+
+#teacher tr {
+    color: #565352;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+#teacher tr:nth-child(even){background-color: #c6d5f3 ;}
+#teacher tr{background-color: #e9edf4;}
+
+.btn-form{
+    border: 3px solid #000000;
+    background-color: #00acec;
+    color: #ffffff;
+}
+.first_tr{
+    color: #ffffff;
+    background-color: #4e81ba !important;
+    text-align: right;
+}
+.second_tr{
+    background-color: #c6d5f3 !important;
+}
+.third_tr{
+    background-color:#e9edf4 !important;
+}
+.input-login{
+    font-family: SutonnyUniBanglaOMJ;
+    width: 200px;
+    padding: 12px 10px;
+    margin-top: -4px;
+    border: 4px solid #365d86;
+    text-align: center;
+}
+.btn-login{
+    font-family: SutonnyUniBanglaOMJ;
+    width: 400px;
+    padding: 12px 10px;
+    border: 4px solid #365d86;
+    border-radius: inherit;
+    background-color: #00acec;
+    color: #ffffff;
+    margin-top: -3px;
+}
+.bani-text{
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: justify;
+}
+.text-black{
+    color: #000000 !important;
+}
+.btn-result{
+    font-family: SutonnyUniBanglaOMJ;
+    width: 400px;
+    border: 3px solid #375d88;
+    width: 200px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.btn-res{
+    color: #ffffff;
+    font-family: SutonnyUniBanglaOMJ;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #4e81ba !important;
+    width: 100%;
+    border-radius: inherit;
+    padding: 1px 0px;
+}
+.num-table{
+    border: 1px solid #000000;
+}
+.bg-result{
+    background-color: #f1f7bd !important;
+}
+.bg-result_2{
+    background-color: #f5e5ba !important;
+}
+.bottom-row{
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+}
+.form-f a:hover{
+    background-color: red !important;
+    color: #ffffff !important;
+}
+
+
+
+@media only screen and (max-width: 990px){
+    .main-title{
+        width: 100%;
+    }
+    .main-img{
+        display: none;
+    }
+    .input-login{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .btn-login{
+        width: 100%;
+    }
+    .main-text{
+        font-size: 16px;
+    }
+}
